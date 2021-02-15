@@ -1,7 +1,7 @@
 .gradient-text {
     display: block;
-    font-size: 1rem;
-    background: linear-gradient(to right, #c0fecf, #1ed5a9);
+    font-size: 2rem;
+    background: linear-gradient(to right, var(--lightGreen), var(--darkGreen));
     background-clip: text;
     color: transparent;
   }

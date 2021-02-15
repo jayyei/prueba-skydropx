@@ -1,9 +1,9 @@
 import Layout from '../components/layout'
 
-export default function Home() {
+export default function Popular() {
   return (
     <Layout title='Listado de Tv shows'>
-      <div>Inicio</div>
+      <div>Popular</div>
     </Layout>
   )
 }

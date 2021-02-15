@@ -1,6 +1,7 @@
 import styles from './info.module.css'
 
 
+// Info label
 const Info = ({
     text='informa'
 }) => {

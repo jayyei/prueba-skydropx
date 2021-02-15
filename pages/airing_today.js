@@ -1,9 +1,9 @@
 import Layout from '../components/layout'
 
-export default function Home() {
+export default function AiringToday() {
   return (
     <Layout title='Listado de Tv shows'>
-      <div>Inicio</div>
+      <div>Estan viendo</div>
     </Layout>
   )
 }
