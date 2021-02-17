@@ -1,4 +1,5 @@
-import Layout from '../components/layout'
+import Layout from '../components/layout';
+import Card from '../components/Card/card';
 
 export default function Home() {
   return (

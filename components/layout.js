@@ -9,6 +9,7 @@ const Layout = ({
         <>
             <Head>
                 <title>{title}</title>
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
             </Head>
             <Header/>
             <main>

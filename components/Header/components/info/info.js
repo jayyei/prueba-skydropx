@@ -1,12 +1,18 @@
-import styles from './info.module.css'
+import styles from './info.module.css';
+import Link from 'next/link';
 
 
 // Info label
 const Info = ({
-    text='informa'
+    text='informa',
+    href='/'
 }) => {
     return (
-        <h1 className={styles['gradient-text']}>{text}</h1>
+        <Link href={href}>
+            <h1 className={styles['gradient-text']}>
+                {text}
+            </h1>
+        </Link>
     );
 }
 
