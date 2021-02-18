@@ -24,3 +24,7 @@
     text-transform: uppercase;
     margin-left: 1rem;
 } 
+
+.active {
+    color: gold;
+}

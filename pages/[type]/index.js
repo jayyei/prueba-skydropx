@@ -24,7 +24,7 @@ export default function ShowList() {
   useEffect(async ()=>{
     if (!type) return;
     const info = await getInfo(type, 'en-US', '1' );
-    setResults(info.results)
+    setResults(info.results);
   }, [type]);
   
   return (

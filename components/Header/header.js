@@ -15,8 +15,8 @@ const Header = (props) => {
     // Principal routes
     const [btnRoutes] = useState([
         { href: `/popular?title=${titles[0]}`, text: titles[0] },
-        {href: `top_rated?title=${titles[1]}`, text: titles[1] },
-        {href: `airing_today?title=${titles[2]}`, text: titles[2] }
+        {href: `/top_rated?title=${titles[1]}`, text: titles[1] },
+        {href: `/airing_today?title=${titles[2]}`, text: titles[2] }
     ]);
 
     return(
