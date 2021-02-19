@@ -1,0 +1,8 @@
+.gradient-text {
+    display: block;
+    font-size: 2rem;
+    background: linear-gradient(to right, var(--lightGreen), var(--darkGreen));
+    background-clip: text;
+    color: transparent;
+    cursor: pointer;
+  }

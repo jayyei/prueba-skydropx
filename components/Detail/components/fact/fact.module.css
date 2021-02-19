@@ -1,0 +1,12 @@
+.fact {
+    margin-right: 2rem;
+    display: inline-block;
+}
+
+.fact:before{
+    content:"• ";
+}
+
+.fact:last-of-type {
+    margin-right: 0;
+}

@@ -1,0 +1,13 @@
+.first-section {
+    margin-left: 2rem;
+}
+
+.first-section h1 {
+    font-size: 4.5rem;
+}
+
+@media(max-width: 800px) {
+    .first-section {
+        text-align: center;
+    }
+}

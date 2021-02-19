@@ -1,0 +1,10 @@
+.title-card {
+    display: block;
+    font-size: 3rem;
+    background-clip: text;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
