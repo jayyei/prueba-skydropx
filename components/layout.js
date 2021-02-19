@@ -6,9 +6,11 @@ const Layout = ({
     children
 }) => {
     return(
-        <>
+        <div>
             <Head>
                 <title>{title}</title>
+                <link rel="preconnect" href="https://fonts.gstatic.com"/>
+                <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto+Slab&display=swap" rel="stylesheet"/>
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
             </Head>
             <Header/>
@@ -16,7 +18,7 @@ const Layout = ({
                 {children}
             </main>
             <footer></footer>
-        </>
+        </div>
     );
 }
 

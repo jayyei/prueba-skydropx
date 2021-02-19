@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
 
 // Services
 import { getInfo }  from '../../services/tmdb';
@@ -11,9 +12,20 @@ import Card from '../../components/Card/card';
 // Styles
 import styles from './index.module.css';
 
+// Actions
+import { activeShow } from '../../actions/showActions';
+
 
 
 export default function ShowList() {
+
+  const [dicType] = useState({
+    popular: 'Shows mas populares',
+    top_rated: 'Shows mas valorados',
+    airing_today: 'Shows al aire'
+  })
+
+  const dispatch = useDispatch();
 
   // state for results
   const [results, setResults] = useState([])
@@ -24,6 +36,7 @@ export default function ShowList() {
   useEffect(async ()=>{
     if (!type) return;
     const info = await getInfo(type, 'en-US', '1' );
+    dispatch(activeShow(dicType[`${type}`]));
     setResults(info.results);
   }, [type]);
   

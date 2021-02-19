@@ -1,0 +1,21 @@
+.button-detail {
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    border: none;
+    padding: 2rem;
+    height: fit-content;
+    margin-right: 2rem;
+}
+
+.button-detail:last-of-type {
+    margin: 0;
+}
+
+.button-detail:hover{
+    transform: scale(1.1);
+}
+
+.icon-detail {
+    transform: translate(0, 10%);
+}

@@ -1,7 +1,8 @@
 import {
     SET_SHOW_TYPE,
     SET_ID_SHOW,
-    SET_FAVORITE_SHOW
+    SET_FAVORITE_SHOW,
+    SET_SHOW_DETAIL
 } from '../types';
 
 // for style button and type of data
@@ -18,10 +19,17 @@ export function idShow(id) {
     }
 }
 
-// for dadd favorite show
+// for add favorite show
 export function favoriteShow(id) {
     return dispatch => {
         dispatch(setFavoriteShow(id));
+    }
+}
+
+// for add favorite show
+export function showDetail(info) {
+    return dispatch => {
+        dispatch(setShowDetail(info));
     }
 }
 
@@ -40,4 +48,9 @@ const setIdShow = (id) =>({
 const setFavoriteShow = (id) =>({
     type: SET_FAVORITE_SHOW,
     payload: id
+});
+
+const setShowDetail = (info) =>({
+    type: SET_SHOW_DETAIL,
+    payload: info
 });

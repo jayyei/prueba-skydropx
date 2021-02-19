@@ -8,16 +8,24 @@ import Description from './components/description/description';
 import { useRouter } from 'next/router'
 // actions
 import { idShow, favoriteShow } from '../../actions/showActions';
+import { useEffect, useState } from 'react';
 
 
 // generic card for tv shows
 const Card = ({info}) => {
+
+    const [poster, setPoster] = useState('');
 
     const dispatch = useDispatch();
     const router = useRouter();
 
     const favorite = useSelector( state => state.show.favoriteShows.find(e => e === info['id']))
 
+    useEffect(()=>{
+        setPoster(`https://image.tmdb.org/t/p/w300/${info['poster_path']}`)
+    },[info])
+
+    // for store the id show in redux and redirect to detail page
     const handleAdd = () => {
         dispatch(idShow(info['id']));
         router.push(`/show/${info['id']}`)
@@ -58,7 +66,7 @@ const Card = ({info}) => {
             <div className={styles['card-image']}>
                 <img 
                     loading="lazy" 
-                    src={`https://image.tmdb.org/t/p/w300/${info['poster_path']}`}
+                    src={poster}
                     onError={()=> setPoster('/no_image.png')}
                 />
             </div>

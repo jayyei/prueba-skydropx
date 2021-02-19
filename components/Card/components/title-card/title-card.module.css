@@ -4,4 +4,7 @@
     background-clip: text;
     color: white;
     text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

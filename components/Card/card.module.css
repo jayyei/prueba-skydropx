@@ -10,6 +10,7 @@
     padding: 1rem;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
+    overflow: hidden;
 }
 
 .card-info {

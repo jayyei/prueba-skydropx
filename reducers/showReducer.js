@@ -3,17 +3,20 @@ import {defineState} from 'redux-localstore'
 import {
     SET_SHOW_TYPE,
     SET_ID_SHOW,
-    SET_FAVORITE_SHOW
+    SET_FAVORITE_SHOW,
+    SET_SHOW_DETAIL
 } from '../types'
 
 
 const defaultState = {
     showId: null,
     favoriteShows: [],
-    showType: ''
+    showType: '',
+    showDetail: {}
 }
 
-const initialState = defineState(defaultState)('show')
+const initialState = defineState(defaultState)('show');
+delete initialState.showDetail
 
 export default function showReducer (state = initialState, action) {
     switch (action.type) {
@@ -37,6 +40,13 @@ export default function showReducer (state = initialState, action) {
             return {
                 ...state,
                 favoriteShows
+            }
+        case SET_SHOW_DETAIL:
+            return {
+                ...state,
+                showDetail: {
+                    ...action.payload
+                }
             }
         default:
             return state;

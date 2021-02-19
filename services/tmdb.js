@@ -22,7 +22,7 @@ const URL_BASE = `https://api.themoviedb.org/3/tv`
     https://api.themoviedb.org/3/tv/airing_today?api_key=${}&language=en-US&page=1 */
 
 
-// use this funtcion for reach data of any type
+// use this function for reach data of any type
 export async function getInfo (type, language = 'en-US', page = '1') {
     const response = await axios.get(`${URL_BASE}/${type}`, 
      { 
@@ -34,4 +34,3 @@ export async function getInfo (type, language = 'en-US', page = '1') {
      });
      return response.data
 }
-

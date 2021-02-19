@@ -1,0 +1,15 @@
+.detail-container {
+    display: flex;
+    background-color: rgba(0,0,0,0.8);
+    height: inherit;
+    padding: 1rem;
+    align-items:flex-start;
+}
+
+@media (max-width: 800px){
+    .detail-container{
+        flex-flow: column;
+        justify-content: right;
+        align-items: center;
+    }
+}

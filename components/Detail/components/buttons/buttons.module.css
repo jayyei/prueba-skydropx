@@ -1,0 +1,11 @@
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width: 800px) {
+    .buttons{
+        justify-content: center;
+        margin-left: -6rem;
+    }
+}
