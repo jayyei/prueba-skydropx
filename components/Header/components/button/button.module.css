@@ -45,14 +45,3 @@
     }
 }
 
-@media (max-width: 500px) {
-    .button {
-        min-width: 40rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .button {
-        min-width: 32rem;
-    }
-}

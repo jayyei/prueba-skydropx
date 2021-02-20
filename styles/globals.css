@@ -4,6 +4,7 @@
   --cardGreen: #92FE9D;
   --cardBlue: #00C9FF;
   --perGray: #6F6F6F;
+  --paginatorColor: #ef6eae;
   --img: '';
 }
 
@@ -60,6 +61,3 @@ a {
 }
 
 
-button:active {
-  background-color: var(--cardGreen);
-}

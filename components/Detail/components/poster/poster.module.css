@@ -14,5 +14,6 @@
 @media (max-width: 800px) {
     .poster {
         max-width: 80%;
+        height: 70%;
     }
 }

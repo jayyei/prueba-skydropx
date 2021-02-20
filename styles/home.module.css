@@ -1,0 +1,33 @@
+.home {
+    height: 95vh;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media(max-width: 400px) {
+    .home{
+        height: 150vh;
+    }
+}
+
+.gradient-text {
+    display: block;
+    font-size: 5rem;
+    background: linear-gradient(to right, var(--lightGreen), var(--darkGreen));
+    background-clip: text;
+    color: transparent;
+  }
+
+h1.gradient-text  {
+    margin: 0;
+    height: min-content;
+}
+
+p.gradient-text  {
+    margin: 0 2rem;
+    color: white;
+}
