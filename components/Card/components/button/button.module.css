@@ -26,5 +26,5 @@
 } 
 
 .active {
-    color: gold;
+    color: var(--cardGreen);
 }

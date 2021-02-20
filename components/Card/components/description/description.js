@@ -9,7 +9,8 @@ const titleCard = ({
     const [titleMin, setTitleMin] = useState('');
 
     const handleText = useCallback(
-        (txt)=> txt.slice(0, 60).concat('', '...'), []);
+        (txt)=> txt.slice(0, 60).concat('', '...')
+    ,[]);
 
     useEffect(() =>{
         setTitleMin(handleText(text))

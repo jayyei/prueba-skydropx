@@ -1,12 +1,13 @@
 .flex-parent{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 @media (max-width: 900px) {
     .flex-parent {
       flex-flow: column wrap;
+      justify-content: space-around;
     }
 }

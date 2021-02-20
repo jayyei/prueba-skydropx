@@ -22,6 +22,7 @@ const Card = ({info}) => {
     const favorite = useSelector( state => state.show.favoriteShows.find(e => e === info['id']))
 
     useEffect(()=>{
+        console.log(info)
         setPoster(`https://image.tmdb.org/t/p/w300/${info['poster_path']}`)
     },[info])
 
@@ -39,7 +40,7 @@ const Card = ({info}) => {
         <div className={styles['card-container']}>
             <div className={styles['card-left']}>
                 <Title
-                 text={info['original_name']}
+                 text={info['name']}
                 />
                 <div className={styles['card-info']}>
                     <p>Calificación: {info['vote_average']}</p>
