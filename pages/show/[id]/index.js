@@ -2,6 +2,7 @@ import Layout from '../../../components/layout';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+
 import Detail from '../../../components/Detail/detail';
 
 // Services
