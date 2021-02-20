@@ -15,4 +15,4 @@ Dirigete a [http://localhost:3000](http://localhost:3000) en tu navegador para o
 
 ## Aplicación Desplegada
 
-Dirigete a [] para ver los resultados.
+Dirigete a [https://prueba-skydropx.vercel.app/] para ver los resultados.
