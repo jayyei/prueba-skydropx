@@ -16,6 +16,13 @@
     color: var(--paginatorColor);
 }
 
+.no-border {
+    border: none;
+    padding: 0rem 1rem;
+    margin: 0;
+    font-size: 2rem;
+}
+
 .pulse:hover {
     border-color: var(--paginatorColor);
     color: #fff;

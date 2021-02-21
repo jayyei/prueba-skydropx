@@ -5,7 +5,7 @@ import styles from './card.module.css';
 import Button from './components/button/button';
 import Title from './components/title-card/title-card';
 import Description from './components/description/description';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 // actions
 import { idShow, favoriteShow } from '../../actions/showActions';
 import { useEffect, useState } from 'react';

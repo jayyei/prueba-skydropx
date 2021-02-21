@@ -1,7 +1,7 @@
 .card-container {
     display: flex;
     margin: 1rem;
-    flex: 1 1 50rem;
+    flex: 1 1 45rem;
     justify-content: center;
 }
 

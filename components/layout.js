@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import Header from './Header/header'
+import Header from './Header/header';
+import Loading from './Loading/loading';
 
 const Layout = ({
     title = 'Default title',
@@ -16,6 +17,7 @@ const Layout = ({
             <Header/>
             <main>
                 {children}
+                <Loading/>
             </main>
             <footer></footer>
         </div>

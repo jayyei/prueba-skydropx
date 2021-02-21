@@ -24,6 +24,7 @@ const URL_BASE = `https://api.themoviedb.org/3/tv`
 
 // use this function for reach data of any type
 export async function getInfo (type, language = 'en-US', page = '1') {
+
     const response = await axios.get(`${URL_BASE}/${type}`, 
      { 
         params: {
