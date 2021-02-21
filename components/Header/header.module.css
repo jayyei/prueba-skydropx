@@ -5,9 +5,15 @@
     align-items: center;
 }
 
+@media (max-width: 1000px) {
+    .flex-parent {
+      justify-content: flex-end;
+    }
+}
+
 @media (max-width: 900px) {
     .flex-parent {
       flex-flow: column wrap;
-      justify-content: space-around;
+      justify-content: flex-end;
     }
 }

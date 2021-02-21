@@ -2,7 +2,8 @@ import {
     SET_SHOW_TYPE,
     SET_ID_SHOW,
     SET_FAVORITE_SHOW,
-    SET_SHOW_DETAIL
+    SET_SHOW_DETAIL,
+    SET_IS_LOADING
 } from '../types';
 
 // for style button and type of data
@@ -33,6 +34,13 @@ export function showDetail(info) {
     }
 }
 
+// for active loading spinner
+export function loading(value) {
+    return dispatch => {
+        dispatch(setIsLoading(value));
+    }
+}
+
 // Show actions creators
 
 const setShow = (value) =>({
@@ -53,4 +61,9 @@ const setFavoriteShow = (id) =>({
 const setShowDetail = (info) =>({
     type: SET_SHOW_DETAIL,
     payload: info
+});
+
+const setIsLoading = (value) =>({
+    type: SET_IS_LOADING,
+    payload: value
 });

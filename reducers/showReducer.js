@@ -1,22 +1,19 @@
-import {defineState} from 'redux-localstore'
-
+import { loadState } from '../store.persist';
 import {
     SET_SHOW_TYPE,
     SET_ID_SHOW,
     SET_FAVORITE_SHOW,
-    SET_SHOW_DETAIL
+    SET_SHOW_DETAIL,
+    SET_IS_LOADING
 } from '../types'
 
-
-const defaultState = {
+const initialState = loadState()?.show ?? {
     showId: null,
     favoriteShows: [],
     showType: '',
-    showDetail: {}
+    showDetail: {},
+    isLoading: false
 }
-
-const initialState = defineState(defaultState)('show');
-delete initialState.showDetail
 
 export default function showReducer (state = initialState, action) {
     switch (action.type) {
@@ -47,6 +44,11 @@ export default function showReducer (state = initialState, action) {
                 showDetail: {
                     ...action.payload
                 }
+            }
+        case SET_IS_LOADING:
+            return {
+                ...state,
+                isLoading: action.payload
             }
         default:
             return state;
