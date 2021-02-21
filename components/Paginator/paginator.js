@@ -2,6 +2,7 @@ import styles from './paginator.module.css';
 
 //Components
 import Button from './components/button/button';
+import PageNumber from './components/pageNumber/pageNumber';
 
 // Redux
 import { useDispatch, useSelector } from 'react-redux';
@@ -38,6 +39,7 @@ const Paginator = () => {
     
     return (
         <div className={styles.paginator}>
+            <PageNumber/>
             <span>Ordenar</span>
             <Button
              active={alpha} 

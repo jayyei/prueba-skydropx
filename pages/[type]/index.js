@@ -14,7 +14,8 @@ import Paginator from '../../components/Paginator/paginator'
 import styles from './index.module.css';
 
 // Actions
-import { activeShow } from '../../actions/showActions';
+import { activeShow, loading } from '../../actions/showActions';
+import { reset, totalPages, Page } from '../../actions/paginationActions';
 
 
 
@@ -31,28 +32,47 @@ export default function ShowList() {
   
   const dispatch = useDispatch();
 
-  
   // extract query info
   const router = useRouter();
   const { type, title } = router.query;
 
+  // get page info
+  const page = useSelector( state => state.pagination.page);
+
+  //load info
   useEffect(async ()=>{
     if (!type) return;
+    dispatch(loading(true));
     const info = await getInfo(type, 'en-US', '1' );
+    dispatch(Page(1));
     dispatch(activeShow(dicType[`${type}`]));
     setResults(info.results);
+    dispatch(reset());
+    dispatch(totalPages(info['total_pages']));
+    dispatch(loading(false));
   }, [type]);
+
+  // For pagination
+  useEffect(async()=>{
+    if(!type) return;
+    dispatch(loading(true));
+    const info = await getInfo(type, 'en-US', `${page}` );
+    setResults(info.results);
+    dispatch(loading(false));
+  },[page, type])
 
   // info about order 
   const alpha = useSelector( state => state.pagination.alphabeticalOrder);
   const score = useSelector( state => state.pagination.scoreOrder);
 
-  // useEffect Order by name
+  // useEffect Order by name or score
   useEffect(async()=>{
     if(!alpha && !score && !type) return;
     if(!alpha && !score && type) {
+      dispatch(loading(true));
       const info = await getInfo(type, 'en-US', '1' );
       setResults(info.results);
+      dispatch(loading(false));
       return;
     } 
     if(alpha && !score){

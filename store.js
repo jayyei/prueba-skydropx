@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk'
 import reducer from './reducers';
-import storeSynchronize from 'redux-localstore';
+import {saveState } from './store.persist';
 
 let store;
 
@@ -37,6 +37,9 @@ export const initializeStore = (preloadedState) => {
 
 export function useStore(initialState) {
     const store = useMemo(() => initializeStore(initialState), [initialState])
-    storeSynchronize(store)
+    store.subscribe(()=>{
+        console.log(store.getState())
+        saveState(store.getState())
+    })
     return store
   }

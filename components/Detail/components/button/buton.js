@@ -1,9 +1,12 @@
 import styles from './button.module.css';
 
 
-const Button = ({icon='favorite'}) => {
+const Button = ({icon='favorite', active=false, handleClick=()=>{}}) => {
     return(
-        <button className={styles['button-detail']}>
+        <button 
+         onClick={handleClick}
+         className={`${styles['button-detail']} ${active? styles['active'] : ''}`}
+        >
             <span className={`material-icons ${styles['icon-detail']}`}>
                 {icon}
             </span>

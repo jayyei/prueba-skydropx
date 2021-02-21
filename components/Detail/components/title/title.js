@@ -8,7 +8,8 @@ const Title = () => {
     const showDetail = useSelector(state => state.show.showDetail);
     
     const handleRunTime = useCallback(()=>{
-        let duration = showDetail['episode_run_time'][0];
+        if(!showDetail) return;
+        let duration = showDetail['episode_run_time'] && showDetail['episode_run_time'][0];
         if(duration >= 60 && duration % 60 === 0) {
             return `${parseInt(duration/60)}h`
         }
